@@ -1,0 +1,44 @@
+{
+  "name": "tasks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "startdate": {
+      "type": "date"
+    },
+    "enddate": {
+      "type": "date"
+    },
+    "description": {
+      "type": "string"
+    },
+    "log-time": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string"
+    },
+    "task-assigned": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "file": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 class ProjectDetails extends Component {
@@ -35,18 +36,36 @@ class ProjectDetails extends Component {
     return (
       <div>
         <br />
-        <Link to="/" className="btn grey">Back</Link>
-        <h3> {this.state.details.name}</h3>
-        <ul className="collection">
-          <li className="collection-item">start {this.state.details.startdate}</li>
-          <li className="collection-item">end: {this.state.details.enddate}</li>
-        </ul>
-        <Link className="btn" to={`/projects/edit/${this.state.details.id}`}>Edit</Link>
-        <button onClick={this.onDelete.bind(this)} className="btn red right">Delete</button>
-      </div >
+        <Link to="/projects" className="btn grey">Back</Link>
 
+
+        <Table responsive striped bordered>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Start</th>
+              <th>End </th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><Link to="/tasks">{this.state.details.name}</Link></td>
+              <td>{this.state.details.startdate}</td>
+              <td>{this.state.details.enddate}</td>
+              <td>
+                <ul className="actions">
+                  <li><Link to={`/projects/edit/${this.state.details.id}`}><i className="fa fa-edit"></i></Link></li>
+                  <li onClick={this.onDelete.bind(this)} ><a><i className="fa fa-trash"></i></a></li></ul></td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
     )
   }
 }
 
 export default ProjectDetails;
+
+
+

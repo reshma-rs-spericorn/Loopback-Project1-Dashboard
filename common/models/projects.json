@@ -17,7 +17,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "tasks": {
+      "type": "hasMany",
+      "model": "tasks",
+      "foreignKey": ""
+    },
+    "meetups": {
+      "type": "hasMany",
+      "model": "meetups",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

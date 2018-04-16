@@ -12,11 +12,11 @@ class Navbar extends Component {
               <i className="fa fa-bars"></i>
             </a>
             <ul className="right hide-on-small-only">
-              <li><Link to="/tasks"><i className="fa fa-users"></i> Tasks</Link></li>
+              <li><Link to="/projects"><i className="fa fa-users"></i> Projects</Link></li>
             </ul>
             <ul className="side-nav" id="main-menu">
-              <li><Link to="/tasks"><i className="fa fa-users"></i> Tasks</Link></li>
-              <li><Link to="/meetups/add"><i className="fa fa-plus"></i> Add Task</Link></li>
+              {/*<li><Link to="/tasks"><i className="fa fa-users"></i> Tasks</Link></li>-->
+              <li><Link to="/meetups/add"><i className="fa fa-plus"></i> Add Task</Link></li>*/}
               <li><Link to="/projects"><i className="fa fa-users"></i> Projects</Link></li>
               <li><Link to="/projects/add"><i className="fa fa-plus"></i> Add Project</Link></li>
               <li><Link to="/card"><i className="fa fa-tasks"></i> Cards</Link></li>

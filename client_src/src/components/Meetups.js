@@ -31,7 +31,7 @@ class Meetups extends Component {
     return (
       <div>
         <br />
-        <Link to="/" className="btn grey">Back</Link>
+        <Link to="/projects" className="btn grey">Back</Link>
         <h3>Tasks</h3>
         <ul className="collection">
           {meetupItems}

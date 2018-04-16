@@ -67,7 +67,7 @@ class EditProject extends Component {
     return (
       <div>
         <br />
-        <Link to="/" className="btn grey">Back</Link>
+        <Link to="/projects" className="btn grey">Back</Link>
         <h3>Edit project</h3>
         <form onSubmit={this.onSubmit.bind(this)}>
           <div className="input-field">

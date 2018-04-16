@@ -1,0 +1,9 @@
+/* project details */
+.actions li{
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 18px;
+}
+.actions li a:hover{
+  color: grey;
+}

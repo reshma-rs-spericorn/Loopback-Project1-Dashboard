@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import MeetupItem from './MeetupItem';
+import TaskItem from './TaskItem';
 import { Link } from 'react-router-dom';
-class Meetups extends Component {
+class Tasks extends Component {
   constructor() {
     super();
     this.state = {
@@ -14,7 +14,7 @@ class Meetups extends Component {
     this.getMeetups();
   }
   getMeetups() {
-    axios.get('http://localhost:3000/api/meetups')
+    axios.get('http://localhost:3000/api/tasks')
       .then(response => {
         this.setState({ meetups: response.data }, () => {
           //console.log(this.state);
@@ -25,7 +25,7 @@ class Meetups extends Component {
   render() {
     const meetupItems = this.state.meetups.map((meetup, i) => {
       return (
-        <MeetupItem key={meetup.id} item={meetup} />
+        <TaskItem key={meetup.id} item={meetup} />
       )
     })
     return (
@@ -37,7 +37,7 @@ class Meetups extends Component {
           {meetupItems}
         </ul>
         <div className="fixed-action-btn">
-          <Link to="/meetups/add" className="btn-floating btn-large red">
+          <Link to="/tasks/add" className="btn-floating btn-large red">
             <i className="fa fa-plus"></i></Link>
         </div>
       </div>
@@ -45,4 +45,4 @@ class Meetups extends Component {
   }
 }
 
-export default Meetups;
+export default Tasks;

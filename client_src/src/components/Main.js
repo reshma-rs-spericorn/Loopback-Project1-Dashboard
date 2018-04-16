@@ -23,7 +23,7 @@ const Main = () => (
       <Route exact path="/" component={Dashboard} />
       <Route path="/card" component={Card} />
       <Route path="/files" component={Files} />
-      <Route path="/tasks/add" component={AddTask} />
+      <Route path="/projects/:id/tasks/add" component={AddTask} />
       <Route path="/tasks/edit/:id" component={EditTask} />
       <Route path="/tasks/:id" component={TaskDetails} />
       <Route path="/projects/:id/tasks" component={Tasks} />

@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 
 class AddTask extends Component {
   addMeetup(newMeetup) {
+    let meetupId = this.props.match.params.id;
     axios.request({
       method: 'post',
-      url: "http://localhost:3000/api/tasks",
+      url: `http://localhost:3000/api/projects/${meetupId}/tasks`,
       data: newMeetup
     }).then(response => {
       this.props.history.push('/');

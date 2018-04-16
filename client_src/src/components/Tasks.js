@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import TaskItem from './TaskItem';
 import { Link } from 'react-router-dom';
+
 class Tasks extends Component {
   constructor() {
     super();
@@ -11,6 +12,7 @@ class Tasks extends Component {
   }
 
   componentWillMount() {
+
     this.getMeetups();
   }
   getMeetups() {
@@ -24,6 +26,7 @@ class Tasks extends Component {
       .catch(err => console.log("error"));
   }
   render() {
+    let meetupId = this.props.match.params.id;
     const meetupItems = this.state.meetups.map((meetup, i) => {
       return (
         <TaskItem key={meetup.id} item={meetup} />
@@ -38,7 +41,7 @@ class Tasks extends Component {
           {meetupItems}
         </ul>
         <div className="fixed-action-btn">
-          <Link to="/tasks/add" className="btn-floating btn-large red">
+          <Link to={`/projects/${meetupId}/tasks/add`} className="btn-floating btn-large red">
             <i className="fa fa-plus"></i></Link>
         </div>
       </div>

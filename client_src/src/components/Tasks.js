@@ -14,7 +14,8 @@ class Tasks extends Component {
     this.getMeetups();
   }
   getMeetups() {
-    axios.get('http://localhost:3000/api/tasks')
+    let meetupId = this.props.match.params.id;
+    axios.get(`http://localhost:3000/api/projects/${meetupId}/tasks`)
       .then(response => {
         this.setState({ meetups: response.data }, () => {
           //console.log(this.state);
@@ -31,7 +32,7 @@ class Tasks extends Component {
     return (
       <div>
         <br />
-        <Link to="/" className="btn grey">Back</Link>
+        <Link to="/projects" className="btn grey">Back</Link>
         <h3>Tasks</h3>
         <ul className="collection">
           {meetupItems}

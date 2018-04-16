@@ -26,7 +26,7 @@ const Main = () => (
       <Route path="/tasks/add" component={AddTask} />
       <Route path="/tasks/edit/:id" component={EditTask} />
       <Route path="/tasks/:id" component={TaskDetails} />
-      <Route path="/tasks" component={Tasks} />
+      <Route path="/projects/:id/tasks" component={Tasks} />
       <Route path="/projects/add" component={AddProject} />
       <Route path="/projects/edit/:id" component={EditProject} />
       <Route path="/projects/:id" component={ProjectDetails} />

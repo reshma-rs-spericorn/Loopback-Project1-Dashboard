@@ -50,7 +50,7 @@ class ProjectDetails extends Component {
           </thead>
           <tbody>
             <tr>
-              <td><Link to="/tasks">{this.state.details.name}</Link></td>
+              <td><Link to={`${this.state.details.id}/tasks`}>{this.state.details.name}</Link></td>
               <td>{this.state.details.startdate}</td>
               <td>{this.state.details.enddate}</td>
               <td>

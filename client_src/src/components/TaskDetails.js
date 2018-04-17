@@ -42,7 +42,7 @@ class TaskDetails extends Component {
           <li className="collection-item">end: {this.state.details.enddate}</li>
           <li className="collection-item">comment: {this.state.details.comment}</li>
         </ul>
-        <Link className="btn" to={`/projects/${this.state.details.projectsId}/tasks/edit/${this.state.details.id}`}>Edit</Link>
+        <Link className="btn" to={`/tasks/edit/${this.state.details.id}`}>Edit</Link>
         <button onClick={this.onDelete.bind(this)} className="btn red right">Delete</button>
       </div >
 

@@ -24,7 +24,7 @@ const Main = () => (
       <Route path="/card" component={Card} />
       <Route path="/files" component={Files} />
       <Route path="/projects/:id/tasks/add" component={AddTask} />
-      <Route path="/projects/:id/tasks/edit/:id" component={EditTask} />
+      <Route path="/tasks/edit/:id" component={EditTask} />
       <Route path="/projects/:id/tasks/:id" component={TaskDetails} />
       <Route path="/projects/:id/tasks" component={Tasks} />
       <Route path="/projects/add" component={AddProject} />

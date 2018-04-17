@@ -47,11 +47,11 @@
     "dataSource": "db",
     "public": true
   },
-  "tasks": {
+  "projects": {
     "dataSource": "db",
     "public": true
   },
-  "projects": {
+  "tasks": {
     "dataSource": "db",
     "public": true
   }

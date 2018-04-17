@@ -18,22 +18,22 @@
     "description": {
       "type": "string"
     },
-    "log-time": {
+    "file": {
       "type": "string"
     },
     "comment": {
       "type": "string"
     },
-    "priority": {
+    "logtime": {
       "type": "string"
     },
-    "task-assigned": {
+    "priority": {
       "type": "string"
     },
     "status": {
       "type": "string"
     },
-    "file": {
+    "taskassign": {
       "type": "string"
     }
   },

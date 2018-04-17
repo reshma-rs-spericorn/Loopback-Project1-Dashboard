@@ -24,7 +24,14 @@ class AddTask extends Component {
     const newMeetup = {
       name: this.refs.name.value,
       startdate: this.refs.startdate.value,
-      enddate: this.refs.enddate.value
+      enddate: this.refs.enddate.value,
+      status: this.refs.status.value,
+      description: this.refs.description.value,
+      logtime: this.refs.logtime.value,
+      comment: this.refs.comment.value,
+      priority: this.refs.priority.value,
+      file: this.refs.file.value,
+      taskassigned: this.refs.taskassigned.value
     }
     this.addMeetup(newMeetup);
     e.preventDefault();
@@ -48,6 +55,34 @@ class AddTask extends Component {
           <div className="input-field">
             <input type="text" name="enddate" ref="enddate" />
             <label htmlFor="enddate">enddate</label>
+          </div>
+          <div className="input-field">
+            <input type="text" name="description" ref="description" />
+            <label htmlFor="description"> description</label>
+          </div>
+          <div className="input-field">
+            <input type="text" name="logtime" ref="logtime" />
+            <label htmlFor="logtime"> log</label>
+          </div>
+          <div className="input-field">
+            <input type="text" name="comment" ref="comment" />
+            <label htmlFor="comment"> comment</label>
+          </div>
+          <div className="input-field">
+            <input type="text" name="priority" ref="priority" />
+            <label htmlFor="priority"> priority</label>
+          </div>
+          <div className="input-field">
+            <input type="text" name="taskassigned" ref="taskassigned" />
+            <label htmlFor="taskassigned"> task</label>
+          </div>
+          <div className="input-field">
+            <input type="text" name="status" ref="status" />
+            <label htmlFor="status">status</label>
+          </div>
+          <div className="input-field">
+            <input type="text" name="file" ref="file" />
+            <label htmlFor="file">file</label>
           </div>
           <input type="submit" value="Save" className="btn" />
         </form>

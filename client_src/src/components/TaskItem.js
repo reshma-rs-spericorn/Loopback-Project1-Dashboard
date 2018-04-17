@@ -9,11 +9,10 @@ class TaskItem extends Component {
     }
   }
   render() {
-    alert(this.state.item.projectId)
     return (
 
       <li className="collection-item">
-        <Link to={`/projects/${this.state.item.projectId}/tasks/${this.state.item.id}`}>{this.state.item.name}</Link>
+        <Link to={`/projects/${this.state.item.projectsId}/tasks/${this.state.item.id}`}>{this.state.item.name}</Link>
       </li>
 
     )

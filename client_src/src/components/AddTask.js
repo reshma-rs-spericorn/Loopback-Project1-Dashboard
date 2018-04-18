@@ -42,7 +42,7 @@ class AddTask extends Component {
       <div>
         <br />
         <Link className="btn grey" to="/tasks">Back</Link>
-        <h1>Add Meetup</h1>
+        <h1>Add Task</h1>
         <form onSubmit={this.onSubmit.bind(this)}>
           <div className="input-field">
             <input type="text" name="name" ref="name" />
@@ -57,8 +57,8 @@ class AddTask extends Component {
             <label htmlFor="enddate">enddate</label>
           </div>
           <div className="input-field">
-            <input type="text" name="description" ref="description" />
-            <label htmlFor="description"> description</label>
+            <textarea type="text" name="description" ref="description" className="materialize-textarea" />
+            <label htmlFor=" description"> description</label>
           </div>
           <div className="input-field">
             <input type="text" name="logtime" ref="logtime" />
@@ -77,13 +77,28 @@ class AddTask extends Component {
             <label htmlFor="taskassigned"> task</label>
           </div>
           <div className="input-field">
-            <input type="text" name="status" ref="status" />
-            <label htmlFor="status">status</label>
+            <select name="status" ref="status" >
+              <option value="" disabled="disabled" selected="selected">Status</option>
+              <option value="Not Started">Not Started</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+            </select>
           </div>
           <div className="input-field">
             <input type="text" name="file" ref="file" />
             <label htmlFor="file">file</label>
           </div>
+
+
+          {/*<div className="file-field input-field">
+            <div className="btn">
+              <span>File</span>
+              <input type="file" />
+            </div>
+            <div className="file-path-wrapper">
+              <input className="file-path validate" type="text" name="file" ref="file"/>
+            </div>
+    </div>*/}
           <input type="submit" value="Save" className="btn" />
         </form>
       </div>

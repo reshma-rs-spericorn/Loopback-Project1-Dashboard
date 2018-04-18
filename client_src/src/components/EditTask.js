@@ -10,7 +10,14 @@ class EditTask extends Component {
       name: '',
       startdate: '',
       enddate: '',
-      projectsId: ''
+      projectsId: '',
+      taskassigned: '',
+      status: '',
+      logtime: '',
+      priority: '',
+      file: '',
+      comment: '',
+      description: ''
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -35,6 +42,7 @@ class EditTask extends Component {
           file: response.data.file,
           comment: response.data.comment,
           priority: response.data.priority,
+          description: response.data.description,
           projectsId: response.data.projectsId
         }, () => {
           console.log(this.state);
@@ -64,7 +72,8 @@ class EditTask extends Component {
       file: this.refs.file.value,
       comment: this.refs.comment.value,
       priority: this.refs.priority.value,
-      logtime: this.refs.logtime.value
+      logtime: this.refs.logtime.value,
+      description: this.refs.description.value
     }
     this.editMeetup(newMeetup);
     e.preventDefault();
@@ -100,6 +109,10 @@ class EditTask extends Component {
           <div className="input-field">
             <input placeholder="End Date" type="text" name="enddate" ref="enddate" value={this.state.enddate} onChange={this.handleInputChange} />
           </div>
+          <label htmlFor="name">Description</label>
+          <div className="input-field">
+            <textarea type="text" name="description" ref="description" value={this.state.description} onChange={this.handleInputChange} className="materialize-textarea" />
+          </div>
           <label htmlFor="name">Comment</label>
           <div className="input-field">
             <input type="text" name="comment" ref="comment" value={this.state.comment} onChange={this.handleInputChange} />
@@ -118,7 +131,12 @@ class EditTask extends Component {
           </div>
           <label htmlFor="name">Status</label>
           <div className="input-field">
-            <input type="text" name="status" ref="status" value={this.state.status} onChange={this.handleInputChange} />
+            <select name="status" ref="status" value={this.state.status} onChange={this.handleInputChange}>
+              <option value="" disabled="disabled" selected="selected">Status</option>
+              <option value="Not Started">Not Started</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+            </select>
           </div>
           <label htmlFor="name">File</label>
           <div className="input-field">

@@ -90,22 +90,15 @@ class AddTask extends Component {
             <option value="In Progress">In Progress</option>
             <option value="Completed">Completed</option>
           </select>
-
-          <div className="input-field">
-            <input type="text" name="file" ref="file" />
-            <label htmlFor="file">File</label>
-          </div>
-
-
-          {/*<div className="file-field input-field">
+          <div className="file-field input-field">
             <div className="btn">
               <span>File</span>
               <input type="file" />
             </div>
             <div className="file-path-wrapper">
-              <input className="file-path validate" type="text" name="file" ref="file"/>
+              <input className="file-path validate" type="text" name="file" ref="file" />
             </div>
-    </div>*/}
+          </div>
           <input type="submit" value="Save" className="btn" />
         </form>
       </div>

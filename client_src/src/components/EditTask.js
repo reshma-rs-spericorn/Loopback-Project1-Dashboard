@@ -146,9 +146,14 @@ class EditTask extends Component {
             <option value="Completed">Completed</option>
           </select>
           <br />
-          <label htmlFor="name">File</label>
-          <div className="input-field">
-            <input type="text" name="file" ref="file" value={this.state.file} onChange={this.handleInputChange} />
+          <div className="file-field input-field">
+            <div className="btn">
+              <span>File</span>
+              <input type="file" />
+            </div>
+            <div className="file-path-wrapper">
+              <input className="file-path validate" type="text" name="file" ref="file" value={this.state.file} onChange={this.handleInputChange} />
+            </div>
           </div>
           <div className="input-field">
             <input placeholder="Meetup id" type="text" name="projectsId" ref="projectsId" value={this.state.projectsId} onChange={this.handleInputChange} hidden />

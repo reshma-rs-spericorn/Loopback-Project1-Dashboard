@@ -130,14 +130,29 @@ class EditTask extends Component {
             <input type="text" name="task-assigned" ref="taskassigned" value={this.state.taskassigned} onChange={this.handleInputChange} />
           </div>
           <label htmlFor="name">Status</label>
-          <div className="input-field">
-            <select name="status" ref="status" value={this.state.status} onChange={this.handleInputChange}>
-              <option value="" disabled="disabled" selected="selected">Status</option>
-              <option value="Not Started">Not Started</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Completed">Completed</option>
-            </select>
-          </div>
+          <select name="priority" ref="priority" className="input-field browser-default" value={this.state.priority} onChange={this.handleInputChange}>
+            <option value="" disabled="disabled" selected="selected" className="default">Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <br />
+          <select name="taskassigned" ref="taskassigned" className="input-field browser-default" value={this.state.taskassigned} onChange={this.handleInputChange}>
+            <option value="" disabled="disabled" selected="selected">Task assigned</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+          </select>
+          <br />
+          <select name="status" ref="status" className="input-field browser-default" value={this.state.status} onChange={this.handleInputChange}>
+            <option value="" disabled="disabled" selected="selected">Status</option>
+            <option value="Not Started">Not Started</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+          <br />
           <label htmlFor="name">File</label>
           <div className="input-field">
             <input type="text" name="file" ref="file" value={this.state.file} onChange={this.handleInputChange} />

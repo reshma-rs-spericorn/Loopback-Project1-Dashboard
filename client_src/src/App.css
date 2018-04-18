@@ -7,3 +7,10 @@
 .actions li a:hover{
   color: grey;
 }
+
+.browser-default{
+  border: 0px;
+  border-bottom: 1px solid #9e9e9e;
+  padding: 0px;
+  color: #9e9e9e;
+}

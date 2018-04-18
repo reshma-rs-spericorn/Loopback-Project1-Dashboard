@@ -50,43 +50,50 @@ class AddTask extends Component {
           </div>
           <div className="input-field">
             <input type="text" name="startdate" ref="startdate" />
-            <label htmlFor="startdate">startdate</label>
+            <label htmlFor="startdate">Start Date</label>
           </div>
           <div className="input-field">
             <input type="text" name="enddate" ref="enddate" />
-            <label htmlFor="enddate">enddate</label>
+            <label htmlFor="enddate">End Date</label>
           </div>
           <div className="input-field">
             <textarea type="text" name="description" ref="description" className="materialize-textarea" />
-            <label htmlFor=" description"> description</label>
+            <label htmlFor=" description"> Description</label>
           </div>
           <div className="input-field">
             <input type="text" name="logtime" ref="logtime" />
-            <label htmlFor="logtime"> log</label>
+            <label htmlFor="logtime"> Log Hours</label>
           </div>
           <div className="input-field">
             <input type="text" name="comment" ref="comment" />
-            <label htmlFor="comment"> comment</label>
+            <label htmlFor="comment"> Comment</label>
           </div>
-          <div className="input-field">
-            <input type="text" name="priority" ref="priority" />
-            <label htmlFor="priority"> priority</label>
-          </div>
-          <div className="input-field">
-            <input type="text" name="taskassigned" ref="taskassigned" />
-            <label htmlFor="taskassigned"> task</label>
-          </div>
-          <div className="input-field">
-            <select name="status" ref="status" >
-              <option value="" disabled="disabled" selected="selected">Status</option>
-              <option value="Not Started">Not Started</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Completed">Completed</option>
-            </select>
-          </div>
+          <select name="priority" ref="priority" className="input-field browser-default">
+            <option value="" disabled="disabled" selected="selected" className="default">Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <br />
+          <select name="taskassigned" ref="taskassigned" className="input-field browser-default">
+            <option value="" disabled="disabled" selected="selected">Task assigned</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+          </select>
+          <br />
+          <select name="status" ref="status" className="input-field browser-default">
+            <option value="" disabled="disabled" selected="selected">Status</option>
+            <option value="Not Started">Not Started</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+
           <div className="input-field">
             <input type="text" name="file" ref="file" />
-            <label htmlFor="file">file</label>
+            <label htmlFor="file">File</label>
           </div>
 
 

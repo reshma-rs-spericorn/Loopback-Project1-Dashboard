@@ -41,7 +41,7 @@ class AddTask extends Component {
     return (
       <div>
         <br />
-        <Link className="btn grey" to="/tasks">Back</Link>
+        <Link to={`/projects/${this.props.match.params.id}/tasks`} className="btn grey">Back</Link>
         <h1>Add Task</h1>
         <form onSubmit={this.onSubmit.bind(this)}>
           <div className="input-field">

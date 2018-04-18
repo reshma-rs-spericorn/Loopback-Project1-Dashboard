@@ -93,8 +93,8 @@ class EditTask extends Component {
     return (
       <div>
         <br />
-        <Link className="btn grey" to="/tasks">Back</Link>
-        <h1>Edit Meetup</h1>
+        <Link className="btn grey" to={`/projects/${this.state.projectsId}/tasks/${this.props.match.params.id}`}>Back</Link>
+        <h1>Edit Task</h1>
         <form onSubmit={this.onSubmit.bind(this)}>
           <label htmlFor="name">Name</label>
           <div className="input-field">

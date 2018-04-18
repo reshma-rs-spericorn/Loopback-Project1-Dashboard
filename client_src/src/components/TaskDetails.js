@@ -17,6 +17,7 @@ class TaskDetails extends Component {
     axios.get(`http://localhost:3000/api/tasks/${meetupId}`)
       .then(response => {
         this.setState({ details: response.data }, () => {
+          console.log("sda")
           console.log(this.state);
         })
       })
@@ -35,7 +36,7 @@ class TaskDetails extends Component {
     return (
       <div>
         <br />
-        <Link to="/tasks" className="btn grey">Back</Link>
+        <Link to={`/projects/${this.state.details.projectsId}/tasks`} className="btn grey">Back</Link>
         <h3> {this.state.details.name}</h3>
         <ul className="collection">
           <li className="collection-item">Start Date: {this.state.details.startdate}</li>

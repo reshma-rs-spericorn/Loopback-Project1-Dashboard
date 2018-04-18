@@ -58,7 +58,7 @@ class EditTask extends Component {
       url: `http://localhost:3000/api/projects/${this.state.projectsId}/tasks/${this.state.id}`,
       data: newMeetup
     }).then(response => {
-      this.props.history.push('/');
+      this.props.history.push(`/projects/${this.state.projectsId}/tasks`);
     }).catch(err => console.log(err));
   }
 

@@ -16,7 +16,7 @@ class AddTask extends Component {
       url: `http://localhost:3000/api/projects/${meetupsId}/tasks`,
       data: newMeetup
     }).then(response => {
-      this.props.history.push('/');
+      this.props.history.push(`/projects/${meetupsId}/tasks`);
     }).catch(err => console.log(err));
   }
 

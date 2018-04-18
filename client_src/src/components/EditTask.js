@@ -103,7 +103,6 @@ class EditTask extends Component {
           <label htmlFor="name">Start Date</label>
           <div className="input-field">
             <input placeholder="Start Date" type="text" name="startdate" ref="startdate" value={this.state.startdate} onChange={this.handleInputChange} />
-
           </div>
           <label htmlFor="name">End Date</label>
           <div className="input-field">
@@ -117,19 +116,11 @@ class EditTask extends Component {
           <div className="input-field">
             <input type="text" name="comment" ref="comment" value={this.state.comment} onChange={this.handleInputChange} />
           </div>
-          <label htmlFor="name">Priority</label>
-          <div className="input-field">
-            <input type="text" name="priority" ref="priority" value={this.state.priority} onChange={this.handleInputChange} />
-          </div>
           <label htmlFor="name">Log Time</label>
           <div className="input-field">
             <input type="text" name="logtime" ref="logtime" value={this.state.logtime} onChange={this.handleInputChange} />
           </div>
-          <label htmlFor="name">Task Assigned</label>
-          <div className="input-field">
-            <input type="text" name="task-assigned" ref="taskassigned" value={this.state.taskassigned} onChange={this.handleInputChange} />
-          </div>
-          <label htmlFor="name">Status</label>
+          <label htmlFor="name">Priority</label>
           <select name="priority" ref="priority" className="input-field browser-default" value={this.state.priority} onChange={this.handleInputChange}>
             <option value="" disabled="disabled" selected="selected" className="default">Priority</option>
             <option value="Low">Low</option>
@@ -137,6 +128,7 @@ class EditTask extends Component {
             <option value="High">High</option>
           </select>
           <br />
+          <label htmlFor="name">Task Assigned</label>
           <select name="taskassigned" ref="taskassigned" className="input-field browser-default" value={this.state.taskassigned} onChange={this.handleInputChange}>
             <option value="" disabled="disabled" selected="selected">Task assigned</option>
             <option value="A">A</option>
@@ -146,6 +138,7 @@ class EditTask extends Component {
             <option value="E">E</option>
           </select>
           <br />
+          <label htmlFor="name">Status</label>
           <select name="status" ref="status" className="input-field browser-default" value={this.state.status} onChange={this.handleInputChange}>
             <option value="" disabled="disabled" selected="selected">Status</option>
             <option value="Not Started">Not Started</option>
@@ -159,10 +152,7 @@ class EditTask extends Component {
           </div>
           <div className="input-field">
             <input placeholder="Meetup id" type="text" name="projectsId" ref="projectsId" value={this.state.projectsId} onChange={this.handleInputChange} hidden />
-
           </div>
-
-
           <input type="submit" value="Save" className="btn" />
         </form>
       </div>

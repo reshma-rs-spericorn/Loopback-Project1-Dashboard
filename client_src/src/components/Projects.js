@@ -33,9 +33,19 @@ class Projects extends Component {
         <br />
         <Link to="/" className="btn grey">Back</Link>
         <h3>Projects</h3>
-        <ul className="collection">
+        <div className="collections">
+          <div className="row">
+            <div className="col s3"><b>Name</b>
+            </div>
+            <div className="col s3"><b>Start Date</b>
+            </div>
+            <div className="col s3"><b>End Date</b>
+            </div>
+            <div className="col s3"><b>Actions</b>
+            </div>
+          </div>
           {meetupItems}
-        </ul>
+        </div>
         <div className="fixed-action-btn">
           <Link to="/projects/add" className="btn-floating btn-large red">
             <i className="fa fa-plus"></i></Link>
